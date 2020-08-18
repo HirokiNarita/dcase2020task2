@@ -1,0 +1,18 @@
+IO_OPTION:
+  INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
+  OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/baseline_code/output'
+
+mel_spectrogram_param:
+  n_mels: 128
+  frames : 5
+  n_fft: 1024
+  hop_length: 512
+  power: 2.0
+
+fit:
+  batch_size : 512
+  shuffle : True
+  devise : 'cuda'
+
+etc:
+  test_size : 0.3
