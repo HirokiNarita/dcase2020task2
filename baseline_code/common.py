@@ -13,6 +13,7 @@ import glob
 import argparse
 import sys
 import os
+import random
 
 # additional
 import numpy
@@ -20,6 +21,7 @@ import librosa
 import librosa.core
 import librosa.feature
 import yaml
+import torch
 
 ########################################################################
 
@@ -186,4 +188,11 @@ def select_dirs(param, mode):
     return dirs
 
 ########################################################################
-
+# Setting seed
+########################################################################
+def set_seed(seed: int = 42):
+    random.seed(seed)
+    numpy.random.seed(seed)
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
