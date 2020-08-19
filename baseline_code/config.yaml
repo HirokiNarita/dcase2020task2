@@ -1,6 +1,7 @@
 IO_OPTION:
   INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
   OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/baseline_code/output'
+  TB_OUTPATH: './tbx/exp-1'
 
 mel_spectrogram_param:
   n_mels: 128

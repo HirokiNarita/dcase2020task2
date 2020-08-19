@@ -25,15 +25,18 @@ import torch
 import torch.utils.data as data
 from torch import optim, nn
 from torch.utils.data.dataset import Subset
+from torch.utils.tensorboard import SummaryWriter
 
 # deeplearning tool-kit
 from torchvision import transforms
+import tensorboardX as tbx
 
 # etc
 import yaml
 yaml.warnings({'YAMLLoadWarning': False})
 from tqdm import tqdm
 import mlflow
+from collections import defaultdict
 ############################################################################
 # original library
 ############################################################################
@@ -119,6 +122,9 @@ dataloaders_dict = {"train": train_loader, "valid": valid_loader}
 # training
 #############################################################################
 
+# define writer for tensorbord
+writer = SummaryWriter(log_dir = config['IO_OPTION']['TB_OUTPATH'])
+
 # parameter setting
 net = AutoEncoder()
 optimizer = optim.Adam(net.parameters())
@@ -130,9 +136,10 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
     device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     print("use:", device)
     net.to(device)
-    # lossの初期化
-    epoch_train_loss = []
-    epoch_valid_loss = []
+    # loss保存用のdict
+    total_mses = defaultdict(list)
+    total_scores = defaultdict(list)
+    epoch_scores = defaultdict(list)
     # epochループ開始
     for epoch in range(num_epochs):
         # epochごとの訓練と検証のループ
@@ -143,7 +150,7 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
                 net.eval()
             anomaly_score = {'train':0.0, 'valid':0.0}
             # データローダーからminibatchを取り出すループ
-            for sample in tqdm(dataloaders_dict[phase]):
+            for batch_i ,sample in enumerate(tqdm(dataloaders_dict[phase])):
                 features = sample['features']
                 # サンプル一つ分でのloss
                 sample_loss = {'train':0.0, 'valid':0.0}
@@ -164,19 +171,41 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
                         if phase == 'train':
                             loss.backward()
                             optimizer.step()
+                        total_mses[phase].append(loss.item())
                     # lossを追加
                     sample_loss[phase] += loss.item()
                 # anomaly score
                 anomaly_score[phase] += sample_loss[phase] / features.shape[0]
-                
-            # epoch loss
-            if phase == 'train':
-                epoch_train_loss.append(anomaly_score[phase] / dataloaders_dict[phase].batch_size)
-            else:
-                epoch_valid_loss.append(anomaly_score[phase] / dataloaders_dict[phase].batch_size)
+                total_scores[phase].append(sample_loss[phase] / features.shape[0])
+            # epoch score
+            epoch_score = anomaly_score[phase] / dataloaders_dict[phase].batch_size
+            epoch_scores[phase].append(epoch_score)
+            
+            if phase == 'valid':
                 print('-------------')
-                print('Epoch {}/{}:train_loss:{:.6f}, valid_loss:{:.6f}'.format(epoch+1, num_epochs, epoch_train_loss[-1], epoch_valid_loss[-1]))
+                print('Epoch {}/{}:train_score:{:.6f}, valid_score:{:.6f}'.format(epoch+1, num_epochs, epoch_scores['train'][-1], epoch_scores['valid'][-1]))
+    
+    writer.add_scalars('total_mse',{
+        'train': total_mses['train'],
+        'valid': total_mses['valid']
+        },(epoch+1) * (batch_i+1) * (row+1)
+        )
 
-    return {'train_loss':epoch_train_loss, 'valid_loss':epoch_valid_loss}
+    writer.add_scalars('total_score',{
+        'train': total_scores['train'],
+        'valid': total_scores['valid']
+        },(epoch+1) * (batch_i+1)
+        )
+
+    writer.add_scalars('epoch_score',{
+        'train': epoch_scores['train'],
+        'valid': epoch_scores['valid']
+        },(epoch+1)
+        )
+
+    return {'total_mses':total_mses, 'total_scores':total_scores, 'epoch_scores':epoch_scores}
 
 history = train_net(net, dataloaders_dict, criterion, optimizer, num_epochs=10)
+
+#  close writer for tensorbord
+writer.close()
