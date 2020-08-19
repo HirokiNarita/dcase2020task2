@@ -186,13 +186,3 @@ def select_dirs(param, mode):
         dir_path = os.path.abspath("{base}/*".format(base=param["eval_directory"]))
         dirs = sorted(glob.glob(dir_path))
     return dirs
-
-########################################################################
-# Setting seed
-########################################################################
-def set_seed(seed: int = 42):
-    random.seed(seed)
-    numpy.random.seed(seed)
-    os.environ["PYTHONHASHSEED"] = str(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)

@@ -6,7 +6,6 @@ import glob
 import sys
 import random
 ############################################################################
-############################################################################
 # additional library
 ############################################################################
 # general analysis tool-kit
@@ -44,7 +43,16 @@ from pytorch_model import AutoEncoder
 ############################################################################
 # Setting seed
 ############################################################################
-com.set_seed(42)
+def set_seed(seed: int = 42):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    np.random.seed(seed)
+    random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+
+set_seed(42)
 ############################################################################
 # Setting I/O path
 ############################################################################
