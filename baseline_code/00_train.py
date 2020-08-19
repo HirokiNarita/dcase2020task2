@@ -130,8 +130,6 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
     device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     print("use:", device)
     net.to(device)
-    # ネットワークがある程度固定であれば、高速化できる
-    torch.backends.cudnn.benchmark = True
     # lossの初期化
     epoch_train_loss = []
     epoch_valid_loss = []
