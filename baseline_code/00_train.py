@@ -136,9 +136,10 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
     device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     print("use:", device)
     net.to(device)
-    # loss保存用のdict
-    total_mses = defaultdict(list)
-    total_scores = defaultdict(list)
+    # count
+    total_mse_count = {'train':0, 'valid':0}
+    total_score_count = {'train':0, 'valid':0}
+    # epoch_score保存用のdict
     epoch_scores = defaultdict(list)
     # epochループ開始
     for epoch in range(num_epochs):
@@ -150,7 +151,7 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
                 net.eval()
             anomaly_score = {'train':0.0, 'valid':0.0}
             # データローダーからminibatchを取り出すループ
-            for batch_i ,sample in enumerate(tqdm(dataloaders_dict[phase])):
+            for sample in tqdm(dataloaders_dict[phase]):
                 features = sample['features']
                 # サンプル一つ分でのloss
                 sample_loss = {'train':0.0, 'valid':0.0}
@@ -171,41 +172,26 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
                         if phase == 'train':
                             loss.backward()
                             optimizer.step()
-                        total_mses[phase].append(loss.item())
+                        writer.add_scalar('{}_total_mse'.format(phase), loss.item(), total_mse_count[phase])
+                        total_mse_count[phase]+=1
                     # lossを追加
                     sample_loss[phase] += loss.item()
                 # anomaly score
                 anomaly_score[phase] += sample_loss[phase] / features.shape[0]
-                total_scores[phase].append(sample_loss[phase] / features.shape[0])
+                writer.add_scalar('{}_total_score'.format(phase), anomaly_score[phase], total_score_count[phase])
+                total_score_count[phase]+=1
             # epoch score
             epoch_score = anomaly_score[phase] / dataloaders_dict[phase].batch_size
             epoch_scores[phase].append(epoch_score)
+            writer.add_scalar('{}_epoch_score'.format(phase), epoch_score, epoch)
             
             if phase == 'valid':
                 print('-------------')
                 print('Epoch {}/{}:train_score:{:.6f}, valid_score:{:.6f}'.format(epoch+1, num_epochs, epoch_scores['train'][-1], epoch_scores['valid'][-1]))
-    
-    writer.add_scalars('total_mse',{
-        'train': total_mses['train'],
-        'valid': total_mses['valid']
-        },(epoch+1) * (batch_i+1) * (row+1)
-        )
 
-    writer.add_scalars('total_score',{
-        'train': total_scores['train'],
-        'valid': total_scores['valid']
-        },(epoch+1) * (batch_i+1)
-        )
+    #return {'total_mses':total_mses, 'total_scores':total_scores, 'epoch_scores':epoch_scores}
 
-    writer.add_scalars('epoch_score',{
-        'train': epoch_scores['train'],
-        'valid': epoch_scores['valid']
-        },(epoch+1)
-        )
-
-    return {'total_mses':total_mses, 'total_scores':total_scores, 'epoch_scores':epoch_scores}
-
-history = train_net(net, dataloaders_dict, criterion, optimizer, num_epochs=10)
+train_net(net, dataloaders_dict, criterion, optimizer, num_epochs=100)
 
 #  close writer for tensorbord
 writer.close()
