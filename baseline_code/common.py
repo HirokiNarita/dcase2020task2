@@ -14,6 +14,7 @@ import argparse
 import sys
 import os
 import random
+import time
 
 # additional
 import numpy
@@ -186,3 +187,15 @@ def select_dirs(param, mode):
         dir_path = os.path.abspath("{base}/*".format(base=param["eval_directory"]))
         dirs = sorted(glob.glob(dir_path))
     return dirs
+
+def tic():
+    #require to import time
+    global start_time_tictoc
+    start_time_tictoc = time.time()
+
+
+def toc(tag="elapsed time"):
+    if "start_time_tictoc" in globals():
+        print("{}: {:.9f} [sec]".format(tag, time.time() - start_time_tictoc))
+    else:
+        print("tic has not been called")

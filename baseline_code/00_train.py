@@ -106,13 +106,13 @@ for machine_type in machine_types:
 ############################################################################
 # Make Dataloader
 ############################################################################
-def make_dataloader(MACHINE_TYPE):
+def make_dataloader(machine_type):
     transform = transforms.Compose([
         prep.Wav_to_Melspectrogram(),
         prep.ToTensor()
     ])
-    train_dataset = prep.DCASE_task2_Dataset(train_paths[MACHINE_TYPE]['train'], transform=transform)
-    valid_dataset = prep.DCASE_task2_Dataset(train_paths[MACHINE_TYPE]['valid'], transform=transform)
+    train_dataset = prep.DCASE_task2_Dataset(train_paths[machine_type]['train'], transform=transform)
+    valid_dataset = prep.DCASE_task2_Dataset(train_paths[machine_type]['valid'], transform=transform)
 
     train_loader = torch.utils.data.DataLoader(
         dataset=train_dataset,
@@ -197,8 +197,10 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
 #############################################################################
 # run
 #############################################################################
+com.tic()
 if MACHINE_TYPE == 'run_all':
     for machine_type in machine_types:
+        print('TRAINING : ', machine_type)
         dataloaders_dict = make_dataloader(machine_type)
         # define writer for tensorbord
         os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=True)
@@ -215,6 +217,7 @@ if MACHINE_TYPE == 'run_all':
         #  close writer for tensorbord
         writer.close()
 else:
+    print('TRAINING : ', machine_type)
     machine_type = MACHINE_TYPE
     dataloaders_dict = make_dataloader(machine_type)
     # define writer for tensorbord
@@ -234,3 +237,4 @@ else:
 
 # copy config
 shutil.copy('./config.yaml', OUTPUT_ROOT)
+com.toc()
