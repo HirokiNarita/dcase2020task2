@@ -2,6 +2,7 @@
 # python default library
 ############################################################################
 import os
+import shutil
 import glob
 import sys
 import random
@@ -67,6 +68,7 @@ dev_path = INPUT_ROOT + "/dev_data"
 add_dev_path = INPUT_ROOT + "/add_dev_data"
 eval_test_path = INPUT_ROOT + "/eval_test"
 # machine type
+MACHINE_TYPE = config['IO_OPTION']['MACHINE_TYPE']
 machine_types = os.listdir(dev_path)
 # output dirs
 OUTPUT_ROOT = config['IO_OPTION']['OUTPUT_ROOT']
@@ -75,6 +77,7 @@ OUTPUT_ROOT = config['IO_OPTION']['OUTPUT_ROOT']
 ############################################################################
 dev_train_paths = {}
 add_train_paths = {}
+train_paths = {}
 
 for machine_type in machine_types:
     # dev train
@@ -95,40 +98,40 @@ for machine_type in machine_types:
                                                               test_size=config['etc']['test_size'],
                                                               shuffle=False,
                                                              )
+    train_paths[machine_type] = {}
+    train_paths[machine_type]['train'] = dev_train_paths[machine_type]['train'] + add_train_paths[machine_type]['train']
+    train_paths[machine_type]['valid'] = dev_train_paths[machine_type]['valid'] + add_train_paths[machine_type]['valid']
+
+
 ############################################################################
 # Make Dataloader
 ############################################################################
-transform = transforms.Compose([
-    prep.Wav_to_Melspectrogram(),
-    prep.ToTensor()
-])
-train_dataset = prep.DCASE_task2_Dataset(dev_train_paths[machine_types[0]]['train'], transform=transform)
-valid_dataset = prep.DCASE_task2_Dataset(dev_train_paths[machine_types[0]]['valid'], transform=transform)
+def make_dataloader(MACHINE_TYPE):
+    transform = transforms.Compose([
+        prep.Wav_to_Melspectrogram(),
+        prep.ToTensor()
+    ])
+    train_dataset = prep.DCASE_task2_Dataset(train_paths[MACHINE_TYPE]['train'], transform=transform)
+    valid_dataset = prep.DCASE_task2_Dataset(train_paths[MACHINE_TYPE]['valid'], transform=transform)
 
-train_loader = torch.utils.data.DataLoader(
-    dataset=train_dataset,
-    batch_size=config['fit']['batch_size'],
-    shuffle=config['fit']['shuffle'],
-    )
+    train_loader = torch.utils.data.DataLoader(
+        dataset=train_dataset,
+        batch_size=config['fit']['batch_size'],
+        shuffle=config['fit']['shuffle'],
+        )
 
-valid_loader = torch.utils.data.DataLoader(
-    dataset=valid_dataset,
-    batch_size=config['fit']['batch_size'],
-    shuffle=False,
-    )
+    valid_loader = torch.utils.data.DataLoader(
+        dataset=valid_dataset,
+        batch_size=config['fit']['batch_size'],
+        shuffle=False,
+        )
 
-dataloaders_dict = {"train": train_loader, "valid": valid_loader}
+    dataloaders_dict = {"train": train_loader, "valid": valid_loader}
+    
+    return dataloaders_dict
 #############################################################################
 # training
 #############################################################################
-
-# define writer for tensorbord
-writer = SummaryWriter(log_dir = config['IO_OPTION']['TB_OUTPATH'])
-
-# parameter setting
-net = AutoEncoder()
-optimizer = optim.Adam(net.parameters())
-criterion = nn.MSELoss()
 
 # training function
 def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
@@ -166,8 +169,8 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
                     with torch.set_grad_enabled(phase == 'train'):
                         x = x.to(device, dtype=torch.float32)
                         outputs = net(x)
-                        loss = criterion(outputs, x)    # 再構成誤差
-                        preds = outputs                 # 推定値
+                        loss = criterion(outputs, x)    # MSE(1/640)
+                        preds = outputs                 # decoder output
                         # 訓練時は逆伝播(backforward)
                         if phase == 'train':
                             loss.backward()
@@ -188,10 +191,46 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
             if phase == 'valid':
                 print('-------------')
                 print('Epoch {}/{}:train_score:{:.6f}, valid_score:{:.6f}'.format(epoch+1, num_epochs, epoch_scores['train'][-1], epoch_scores['valid'][-1]))
+    
+    return {'epoch_scores':epoch_scores, 'model':net}
 
-    #return {'total_mses':total_mses, 'total_scores':total_scores, 'epoch_scores':epoch_scores}
+#############################################################################
+# run
+#############################################################################
+if MACHINE_TYPE == 'run_all':
+    for machine_type in machine_types:
+        dataloaders_dict = make_dataloader(machine_type)
+        # define writer for tensorbord
+        os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=True)
+        writer = SummaryWriter(log_dir = config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type)
+        # parameter setting
+        net = AutoEncoder()
+        optimizer = optim.Adam(net.parameters())
+        criterion = nn.MSELoss()
+        num_epochs = config['fit']['num_epochs']
+        history = train_net(net, dataloaders_dict, criterion, optimizer, num_epochs)
+        # output
+        model = history['model']
+        torch.save(model.state_dict(), OUTPUT_ROOT+'/{}_model'.format(machine_type))
+        #  close writer for tensorbord
+        writer.close()
+else:
+    machine_type = MACHINE_TYPE
+    dataloaders_dict = make_dataloader(machine_type)
+    # define writer for tensorbord
+    os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=True)
+    writer = SummaryWriter(log_dir = config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type)
+    # parameter setting
+    net = AutoEncoder()
+    optimizer = optim.Adam(net.parameters())
+    criterion = nn.MSELoss()
+    num_epochs = config['fit']['num_epochs']
+    history = train_net(net, dataloaders_dict, criterion, optimizer, num_epochs)
+    # output
+    model = history['model']
+    torch.save(model.state_dict(), OUTPUT_ROOT+'/{}_model'.format(machine_type))
+    #  close writer for tensorbord
+    writer.close()
 
-train_net(net, dataloaders_dict, criterion, optimizer, num_epochs=100)
-
-#  close writer for tensorbord
-writer.close()
+# copy config
+shutil.copy('./config.yaml', OUTPUT_ROOT)

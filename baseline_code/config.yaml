@@ -1,7 +1,9 @@
 IO_OPTION:
   INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
   OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/baseline_code/output'
-  TB_OUTPATH: './tbx/epoch100'
+  TB_OUTPATH: './tbx/epoch100/ToyCar'
+  # 'ToyCar' or 'ToyConveyor' or  'fan' or 'pump' or 'slider' or 'valve' or 'run_all'
+  MACHINE_TYPE: 'ToyCar'
 
 mel_spectrogram_param:
   n_mels: 128
@@ -13,6 +15,7 @@ mel_spectrogram_param:
 fit:
   batch_size : 512
   shuffle : True
+  num_epochs : 100
   devise : 'cuda'
 
 etc:
