@@ -33120,3 +33120,588 @@ DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install t
 DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
 DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
 DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+ERROR: :file_broken or not exists!! : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan/train/normal_id_02_00000415.wav
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:parso.cache:pickle loaded: /home/hiroki/anaconda3/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/2and3/builtins.pyi
+DEBUG:parso.cache:pickle loaded: /home/hiroki/anaconda3/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.cache:pickle loaded: /home/hiroki/anaconda3/lib/python3.7/typing.py
+DEBUG:parso.cache:pickle loaded: /home/hiroki/anaconda3/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/3/typing.pyi
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 7
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:7]
+DEBUG:parso.python.diff:parse_part from 1 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 7
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:7]
+DEBUG:parso.python.diff:parse_part from 7 to 7 (to 6 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 7; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:6] new[1:6]
+DEBUG:parso.python.diff:copy old[5:6] new[1:6]
+DEBUG:parso.python.diff:-> code[replace] old[7:7] new[7:8]
+DEBUG:parso.python.diff:parse_part from 7 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 8
+DEBUG:parso.python.diff:-> code[equal] old[1:7] new[1:7]
+DEBUG:parso.python.diff:copy old[5:7] new[1:7]
+DEBUG:parso.python.diff:-> code[replace] old[8:8] new[8:8]
+DEBUG:parso.python.diff:parse_part from 8 to 8 (to 7 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 8; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:8] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 9
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:9]
+DEBUG:parso.python.diff:parse_part from 1 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 9
+DEBUG:parso.python.diff:-> code[equal] old[1:8] new[1:8]
+DEBUG:parso.python.diff:copy old[5:8] new[1:8]
+DEBUG:parso.python.diff:-> code[replace] old[9:9] new[9:9]
+DEBUG:parso.python.diff:parse_part from 9 to 9 (to 8 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 9; new: 61
+DEBUG:parso.python.diff:-> code[replace] old[1:9] new[1:61]
+DEBUG:parso.python.diff:parse_part from 1 to 61 (to 60 in part parser)
+DEBUG:parso.python.diff:diff parser end
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+ERROR: :ToyCar model not found 
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_01
+INFO: :test_file  num : 601
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyCar_id_01.csv
+INFO: :AUC : 0.637211155378486
+INFO: :pAUC : 0.521433064733547
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_02
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyCar_id_02.csv
+INFO: :AUC : 0.6750566893424036
+INFO: :pAUC : 0.526375462465688
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_03
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyCar_id_03.csv
+INFO: :AUC : 0.5723696145124717
+INFO: :pAUC : 0.5286430361618332
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_04
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyCar_id_04.csv
+INFO: :AUC : 0.6897732426303855
+INFO: :pAUC : 0.5629550065640291
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[2/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_01
+INFO: :test_file  num : 1181
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyConveyor_id_01.csv
+INFO: :AUC : 0.4301082677165355
+INFO: :pAUC : 0.49338651747478934
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_02
+INFO: :test_file  num : 1136
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyConveyor_id_02.csv
+INFO: :AUC : 0.520048363095238
+INFO: :pAUC : 0.5077145989974937
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_03
+INFO: :test_file  num : 1135
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_ToyConveyor_id_03.csv
+INFO: :AUC : 0.5674168603611658
+INFO: :pAUC : 0.522680292721792
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[3/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_00
+INFO: :test_file  num : 489
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_fan_id_00.csv
+INFO: :AUC : 0.4548071979434447
+INFO: :pAUC : 0.49316736571505887
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_02
+INFO: :test_file  num : 441
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_fan_id_02.csv
+INFO: :AUC : 0.5646334310850439
+INFO: :pAUC : 0.5280135823429541
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_04
+INFO: :test_file  num : 430
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_fan_id_04.csv
+INFO: :AUC : 0.4478181818181818
+INFO: :pAUC : 0.4982456140350877
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_06
+INFO: :test_file  num : 443
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_fan_id_06.csv
+INFO: :AUC : 0.5
+INFO: :pAUC : 0.524321006598128
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[4/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_00
+INFO: :test_file  num : 237
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_pump_id_00.csv
+INFO: :AUC : 0.5231386861313869
+INFO: :pAUC : 0.5251632731463696
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_02
+INFO: :test_file  num : 205
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_pump_id_02.csv
+INFO: :AUC : 0.504
+INFO: :pAUC : 0.48721804511278194
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_04
+INFO: :test_file  num : 194
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_pump_id_04.csv
+INFO: :AUC : 0.5468085106382978
+INFO: :pAUC : 0.49720044792833146
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_06
+INFO: :test_file  num : 196
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_pump_id_06.csv
+INFO: :AUC : 0.30270833333333336
+INFO: :pAUC : 0.4819078947368421
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[5/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_00
+INFO: :test_file  num : 445
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_slider_id_00.csv
+INFO: :AUC : 0.5955072463768116
+INFO: :pAUC : 0.47475209763539283
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_02
+INFO: :test_file  num : 356
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_slider_id_02.csv
+INFO: :AUC : 0.504765625
+INFO: :pAUC : 0.4810855263157895
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_04
+INFO: :test_file  num : 267
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_slider_id_04.csv
+INFO: :AUC : 0.5075449101796407
+INFO: :pAUC : 0.5042546485975418
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_06
+INFO: :test_file  num : 178
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_slider_id_06.csv
+INFO: :AUC : 0.43512820512820516
+INFO: :pAUC : 0.48110661268556004
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[6/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_00
+INFO: :test_file  num : 213
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_valve_id_00.csv
+INFO: :AUC : 0.5153982300884956
+INFO: :pAUC : 0.5086166744294364
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_02
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_valve_id_02.csv
+INFO: :AUC : 0.4916666666666667
+INFO: :pAUC : 0.4806094182825485
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_04
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_valve_id_04.csv
+INFO: :AUC : 0.5339473684210526
+INFO: :pAUC : 0.502770083102493
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_06
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/baseline_code/output/result/anomaly_score_valve_id_06.csv
+INFO: :AUC : 0.39675438596491225
+INFO: :pAUC : 0.48984302862419205
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/baseline_code/output/result/result.csv

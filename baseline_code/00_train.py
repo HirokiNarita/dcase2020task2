@@ -1,80 +1,60 @@
 ############################################################################
-# python default library
+# load library
 ############################################################################
+# python default library
 import os
 import shutil
-import glob
-import sys
-import random
-############################################################################
-# additional library
-############################################################################
+
 # general analysis tool-kit
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.model_selection import train_test_split
-
-# sound analysis tool-kit
-import librosa
-import librosa.core
-import librosa.feature
 
 # pytorch
 import torch
-import torch.utils.data as data
 from torch import optim, nn
-from torch.utils.data.dataset import Subset
 from torch.utils.tensorboard import SummaryWriter
-
-# deeplearning tool-kit
-from torchvision import transforms
-import tensorboardX as tbx
 
 # etc
 import yaml
 yaml.warnings({'YAMLLoadWarning': False})
-from tqdm import tqdm
 import mlflow
 from collections import defaultdict
-############################################################################
+
 # original library
-############################################################################
 import common as com
-import preprocessing as prep
+import pytorch_modeler as modeler
 from pytorch_model import AutoEncoder
 ############################################################################
-# Setting seed
-############################################################################
-def set_seed(seed: int = 42):
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
-    np.random.seed(seed)
-    random.seed(seed)
-    os.environ['PYTHONHASHSEED'] = str(seed)
-
-set_seed(42)
-############################################################################
-# Setting I/O path
+# load config
 ############################################################################
 with open("./config.yaml", 'rb') as f:
     config = yaml.load(f)
+############################################################################
+# Setting seed
+############################################################################
+modeler.set_seed(42)
+############################################################################
+# Setting I/O path
+############################################################################
 # input dirs
 INPUT_ROOT = config['IO_OPTION']['INPUT_ROOT']
 dev_path = INPUT_ROOT + "/dev_data"
 add_dev_path = INPUT_ROOT + "/add_dev_data"
-eval_test_path = INPUT_ROOT + "/eval_test"
 # machine type
 MACHINE_TYPE = config['IO_OPTION']['MACHINE_TYPE']
 machine_types = os.listdir(dev_path)
 # output dirs
 OUTPUT_ROOT = config['IO_OPTION']['OUTPUT_ROOT']
+MODEL_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/models'
+TB_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/tb'
+os.makedirs(MODEL_DIR, exist_ok=True)
+os.makedirs(TB_DIR, exist_ok=True)
 ############################################################################
-# train/valid split
+# make path set and train/valid split
 ############################################################################
+'''
+train_paths[machine_type]['train' or 'valid'] = path
+'''
 dev_train_paths = {}
 add_train_paths = {}
 train_paths = {}
@@ -102,139 +82,39 @@ for machine_type in machine_types:
     train_paths[machine_type]['train'] = dev_train_paths[machine_type]['train'] + add_train_paths[machine_type]['train']
     train_paths[machine_type]['valid'] = dev_train_paths[machine_type]['valid'] + add_train_paths[machine_type]['valid']
 
-
-############################################################################
-# Make Dataloader
-############################################################################
-def make_dataloader(machine_type):
-    transform = transforms.Compose([
-        prep.Wav_to_Melspectrogram(),
-        prep.ToTensor()
-    ])
-    train_dataset = prep.DCASE_task2_Dataset(train_paths[machine_type]['train'], transform=transform)
-    valid_dataset = prep.DCASE_task2_Dataset(train_paths[machine_type]['valid'], transform=transform)
-
-    train_loader = torch.utils.data.DataLoader(
-        dataset=train_dataset,
-        batch_size=config['fit']['batch_size'],
-        shuffle=config['fit']['shuffle'],
-        )
-
-    valid_loader = torch.utils.data.DataLoader(
-        dataset=valid_dataset,
-        batch_size=config['fit']['batch_size'],
-        shuffle=False,
-        )
-
-    dataloaders_dict = {"train": train_loader, "valid": valid_loader}
-    
-    return dataloaders_dict
-#############################################################################
-# training
-#############################################################################
-
-# training function
-def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs):
-    # GPUが使えるならGPUモードに
-    device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
-    print("use:", device)
-    net.to(device)
-    # count
-    total_mse_count = {'train':0, 'valid':0}
-    total_score_count = {'train':0, 'valid':0}
-    # epoch_score保存用のdict
-    epoch_scores = defaultdict(list)
-    # epochループ開始
-    for epoch in range(num_epochs):
-        # epochごとの訓練と検証のループ
-        for phase in ['train', 'valid']:
-            if phase == 'train':
-                net.train()
-            else:
-                net.eval()
-            anomaly_score = {'train':0.0, 'valid':0.0}
-            # データローダーからminibatchを取り出すループ
-            for sample in tqdm(dataloaders_dict[phase]):
-                features = sample['features']
-                # サンプル一つ分でのloss
-                sample_loss = {'train':0.0, 'valid':0.0}
-                # フレームごとに学習させていくループ
-                #print(features)
-                for row in range(features.shape[0]):
-                    # minibatchからフレームごとに取り出す
-                    x = features[row,:]
-                    # optimizerの初期化
-                    optimizer.zero_grad()
-                    # 順伝播(forward)
-                    with torch.set_grad_enabled(phase == 'train'):
-                        x = x.to(device, dtype=torch.float32)
-                        outputs = net(x)
-                        loss = criterion(outputs, x)    # MSE(1/640)
-                        preds = outputs                 # decoder output
-                        # 訓練時は逆伝播(backforward)
-                        if phase == 'train':
-                            loss.backward()
-                            optimizer.step()
-                        writer.add_scalar('{}_total_mse'.format(phase), loss.item(), total_mse_count[phase])
-                        total_mse_count[phase]+=1
-                    # lossを追加
-                    sample_loss[phase] += loss.item()
-                # anomaly score
-                anomaly_score[phase] += sample_loss[phase] / features.shape[0]
-                writer.add_scalar('{}_total_score'.format(phase), anomaly_score[phase], total_score_count[phase])
-                total_score_count[phase]+=1
-            # epoch score
-            epoch_score = anomaly_score[phase] / dataloaders_dict[phase].batch_size
-            epoch_scores[phase].append(epoch_score)
-            writer.add_scalar('{}_epoch_score'.format(phase), epoch_score, epoch)
-            
-            if phase == 'valid':
-                print('-------------')
-                print('Epoch {}/{}:train_score:{:.6f}, valid_score:{:.6f}'.format(epoch+1, num_epochs, epoch_scores['train'][-1], epoch_scores['valid'][-1]))
-    
-    return {'epoch_scores':epoch_scores, 'model':net}
-
 #############################################################################
 # run
 #############################################################################
-com.tic()
-if MACHINE_TYPE == 'run_all':
-    for machine_type in machine_types:
-        print('TRAINING : ', machine_type)
-        dataloaders_dict = make_dataloader(machine_type)
-        # define writer for tensorbord
-        os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=True)
-        writer = SummaryWriter(log_dir = config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type)
-        # parameter setting
-        net = AutoEncoder()
-        optimizer = optim.Adam(net.parameters())
-        criterion = nn.MSELoss()
-        num_epochs = config['fit']['num_epochs']
-        history = train_net(net, dataloaders_dict, criterion, optimizer, num_epochs)
-        # output
-        model = history['model']
-        torch.save(model.state_dict(), OUTPUT_ROOT+'/{}_model'.format(machine_type))
-        #  close writer for tensorbord
-        writer.close()
-else:
+def run(machine_type):
+    com.tic()
     print('TRAINING : ', machine_type)
-    machine_type = MACHINE_TYPE
-    dataloaders_dict = make_dataloader(machine_type)
+    dataloaders_dict = modeler.make_dataloader(train_paths, machine_type)
     # define writer for tensorbord
-    os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=True)
-    writer = SummaryWriter(log_dir = config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type)
+    os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=False)
+    tb_log_dir = TB_DIR + '/' + machine_type
+    writer = SummaryWriter(log_dir = tb_log_dir)
     # parameter setting
     net = AutoEncoder()
     optimizer = optim.Adam(net.parameters())
     criterion = nn.MSELoss()
     num_epochs = config['fit']['num_epochs']
-    history = train_net(net, dataloaders_dict, criterion, optimizer, num_epochs)
+    history = modeler.train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer)
     # output
     model = history['model']
-    torch.save(model.state_dict(), OUTPUT_ROOT+'/{}_model'.format(machine_type))
+    model_out_path = MODEL_DIR+'/{}_model.pth'.format(machine_type)
+    torch.save(model.state_dict(), model_out_path)
     #  close writer for tensorbord
     writer.close()
+    modeler.mlflow_log(history, config, machine_type, model_out_path, tb_log_dir)
+    com.toc()
+
+
+if MACHINE_TYPE == 'run_all':
+    for machine_type in machine_types:
+        run(machine_type)
+else:
+    machine_type = MACHINE_TYPE
+    run(machine_type)
 
 # copy config
 shutil.copy('./config.yaml', OUTPUT_ROOT)
-com.toc()
