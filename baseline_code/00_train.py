@@ -49,6 +49,10 @@ MODEL_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/models'
 TB_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/tb'
 os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(TB_DIR, exist_ok=True)
+
+# copy config
+shutil.copy('./config.yaml', OUTPUT_ROOT)
+
 ############################################################################
 # make path set and train/valid split
 ############################################################################
@@ -116,6 +120,3 @@ if MACHINE_TYPE == 'run_all':
 else:
     machine_type = MACHINE_TYPE
     run(machine_type)
-
-# copy config
-shutil.copy('./config.yaml', OUTPUT_ROOT)
