@@ -1,0 +1,15 @@
+artifact_uri: /media/hiroki/working/research/dcase2020/result/train/mlflow/mlruns/0/4536aee3de064f6e80fe210a10d35dba/artifacts
+end_time: 1599176940935
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 4536aee3de064f6e80fe210a10d35dba
+run_uuid: 4536aee3de064f6e80fe210a10d35dba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1599176940845
+status: 3
+tags: []
+user_id: hiroki

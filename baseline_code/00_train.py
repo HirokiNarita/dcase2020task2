@@ -88,9 +88,10 @@ for machine_type in machine_types:
 def run(machine_type):
     com.tic()
     print('TRAINING : ', machine_type)
-    dataloaders_dict = modeler.make_dataloader(train_paths, machine_type)
+    # dev_train_paths
+    dataloaders_dict = modeler.make_dataloader(dev_train_paths, machine_type)
     # define writer for tensorbord
-    os.makedirs(config['IO_OPTION']['TB_OUTPATH']+'/'+machine_type, exist_ok=False)
+    os.makedirs(TB_DIR+'/'+machine_type, exist_ok=False)
     tb_log_dir = TB_DIR + '/' + machine_type
     writer = SummaryWriter(log_dir = tb_log_dir)
     # parameter setting

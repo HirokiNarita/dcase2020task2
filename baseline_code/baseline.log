@@ -33705,3 +33705,929 @@ INFO: :AUC : 0.39675438596491225
 INFO: :pAUC : 0.48984302862419205
 INFO: :============ END OF TEST FOR A MACHINE ID ============
 INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/baseline_code/output/result/result.csv
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_01
+INFO: :test_file  num : 601
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyCar_id_01.csv
+INFO: :AUC : 0.6392145702902675
+INFO: :pAUC : 0.5186172602821796
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_02
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyCar_id_02.csv
+INFO: :AUC : 0.672437641723356
+INFO: :pAUC : 0.538250387874448
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_03
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyCar_id_03.csv
+INFO: :AUC : 0.5373582766439908
+INFO: :pAUC : 0.5285236901778255
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_04
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyCar_id_04.csv
+INFO: :AUC : 0.6600226757369615
+INFO: :pAUC : 0.5799021362931137
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[2/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_01
+INFO: :test_file  num : 1181
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyConveyor_id_01.csv
+INFO: :AUC : 0.5298392388451444
+INFO: :pAUC : 0.4964774140074596
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_02
+INFO: :test_file  num : 1136
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyConveyor_id_02.csv
+INFO: :AUC : 0.5557886904761904
+INFO: :pAUC : 0.5051887531328321
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_03
+INFO: :test_file  num : 1135
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_ToyConveyor_id_03.csv
+INFO: :AUC : 0.5467027236426485
+INFO: :pAUC : 0.5237683539261169
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[3/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_00
+INFO: :test_file  num : 489
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_fan_id_00.csv
+INFO: :AUC : 0.4473007712082262
+INFO: :pAUC : 0.4933026654038696
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_02
+INFO: :test_file  num : 441
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_fan_id_02.csv
+INFO: :AUC : 0.5598533724340176
+INFO: :pAUC : 0.5431393733600864
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_04
+INFO: :test_file  num : 430
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_fan_id_04.csv
+INFO: :AUC : 0.40824242424242424
+INFO: :pAUC : 0.4915470494417863
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_06
+INFO: :test_file  num : 443
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_fan_id_06.csv
+INFO: :AUC : 0.5000583090379009
+INFO: :pAUC : 0.5310725794077029
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[4/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_00
+INFO: :test_file  num : 237
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_pump_id_00.csv
+INFO: :AUC : 0.5665693430656933
+INFO: :pAUC : 0.5059546676911256
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_02
+INFO: :test_file  num : 205
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_pump_id_02.csv
+INFO: :AUC : 0.6215238095238096
+INFO: :pAUC : 0.4817042606516291
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_04
+INFO: :test_file  num : 194
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_pump_id_04.csv
+INFO: :AUC : 0.5894680851063829
+INFO: :pAUC : 0.5162374020156775
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_06
+INFO: :test_file  num : 196
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_pump_id_06.csv
+INFO: :AUC : 0.32125000000000004
+INFO: :pAUC : 0.4764254385964912
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[5/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_00
+INFO: :test_file  num : 445
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_slider_id_00.csv
+INFO: :AUC : 0.6033623188405798
+INFO: :pAUC : 0.47505720823798625
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_02
+INFO: :test_file  num : 356
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_slider_id_02.csv
+INFO: :AUC : 0.5068359375
+INFO: :pAUC : 0.4817023026315789
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_04
+INFO: :test_file  num : 267
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_slider_id_04.csv
+INFO: :AUC : 0.5299401197604791
+INFO: :pAUC : 0.5083517176173968
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_06
+INFO: :test_file  num : 178
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_slider_id_06.csv
+INFO: :AUC : 0.44346153846153846
+INFO: :pAUC : 0.4817813765182186
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[6/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_00
+INFO: :test_file  num : 213
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_valve_id_00.csv
+INFO: :AUC : 0.5427433628318584
+INFO: :pAUC : 0.5030274802049371
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_02
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_valve_id_02.csv
+INFO: :AUC : 0.48745614035087725
+INFO: :pAUC : 0.48753462603878117
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_04
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_valve_id_04.csv
+INFO: :AUC : 0.5343859649122807
+INFO: :pAUC : 0.5110803324099723
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_06
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_data/result/anomaly_score_valve_id_06.csv
+INFO: :AUC : 0.37280701754385964
+INFO: :pAUC : 0.487072945521699
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/result/no_add_data/result/result.csv
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/media/hiroki/working/research/dcase2020/baseline_code, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/media/hiroki/working/research/dcase2020, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_01
+INFO: :test_file  num : 601
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_01.csv
+INFO: :AUC : 0.6392145702902675
+INFO: :pAUC : 0.5186172602821796
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_02
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_02.csv
+INFO: :AUC : 0.672437641723356
+INFO: :pAUC : 0.538250387874448
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_03
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_03.csv
+INFO: :AUC : 0.5373582766439908
+INFO: :pAUC : 0.5285236901778255
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_04
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_04.csv
+INFO: :AUC : 0.6600226757369615
+INFO: :pAUC : 0.5799021362931137
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[2/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_01
+INFO: :test_file  num : 1181
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_01.csv
+INFO: :AUC : 0.5298392388451444
+INFO: :pAUC : 0.4964774140074596
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_02
+INFO: :test_file  num : 1136
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_02.csv
+INFO: :AUC : 0.5557886904761904
+INFO: :pAUC : 0.5051887531328321
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_03
+INFO: :test_file  num : 1135
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_03.csv
+INFO: :AUC : 0.5467027236426485
+INFO: :pAUC : 0.5237683539261169
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[3/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_00
+INFO: :test_file  num : 489
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_00.csv
+INFO: :AUC : 0.4473007712082262
+INFO: :pAUC : 0.4933026654038696
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_02
+INFO: :test_file  num : 441
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_02.csv
+INFO: :AUC : 0.5598533724340176
+INFO: :pAUC : 0.5431393733600864
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_04
+INFO: :test_file  num : 430
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_04.csv
+INFO: :AUC : 0.40824242424242424
+INFO: :pAUC : 0.4915470494417863
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_06
+INFO: :test_file  num : 443
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_06.csv
+INFO: :AUC : 0.5000583090379009
+INFO: :pAUC : 0.5310725794077029
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[4/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_00
+INFO: :test_file  num : 237
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_00.csv
+INFO: :AUC : 0.5665693430656933
+INFO: :pAUC : 0.5059546676911256
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_02
+INFO: :test_file  num : 205
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_02.csv
+INFO: :AUC : 0.6215238095238096
+INFO: :pAUC : 0.4817042606516291
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_04
+INFO: :test_file  num : 194
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_04.csv
+INFO: :AUC : 0.5894680851063829
+INFO: :pAUC : 0.5162374020156775
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_06
+INFO: :test_file  num : 196
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_06.csv
+INFO: :AUC : 0.32125000000000004
+INFO: :pAUC : 0.4764254385964912
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[5/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_00
+INFO: :test_file  num : 445
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_00.csv
+INFO: :AUC : 0.6033623188405798
+INFO: :pAUC : 0.47505720823798625
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_02
+INFO: :test_file  num : 356
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_02.csv
+INFO: :AUC : 0.5068359375
+INFO: :pAUC : 0.4817023026315789
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_04
+INFO: :test_file  num : 267
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_04.csv
+INFO: :AUC : 0.5299401197604791
+INFO: :pAUC : 0.5083517176173968
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_06
+INFO: :test_file  num : 178
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_06.csv
+INFO: :AUC : 0.44346153846153846
+INFO: :pAUC : 0.4817813765182186
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[6/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_00
+INFO: :test_file  num : 213
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_00.csv
+INFO: :AUC : 0.5427433628318584
+INFO: :pAUC : 0.5030274802049371
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_02
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_02.csv
+INFO: :AUC : 0.48745614035087725
+INFO: :pAUC : 0.48753462603878117
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_04
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_04.csv
+INFO: :AUC : 0.5343859649122807
+INFO: :pAUC : 0.5110803324099723
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_06
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_06.csv
+INFO: :AUC : 0.37280701754385964
+INFO: :pAUC : 0.487072945521699
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/result.csv
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_01
+INFO: :test_file  num : 601
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_01.csv
+INFO: :AUC : 0.6392145702902675
+INFO: :pAUC : 0.5186172602821796
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_02
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_02.csv
+INFO: :AUC : 0.672437641723356
+INFO: :pAUC : 0.538250387874448
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_03
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_03.csv
+INFO: :AUC : 0.5373582766439908
+INFO: :pAUC : 0.5285236901778255
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_04
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_04.csv
+INFO: :AUC : 0.6600226757369615
+INFO: :pAUC : 0.5799021362931137
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[2/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_01
+INFO: :test_file  num : 1181
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_01.csv
+INFO: :AUC : 0.5298392388451444
+INFO: :pAUC : 0.4964774140074596
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_02
+INFO: :test_file  num : 1136
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_02.csv
+INFO: :AUC : 0.5557886904761904
+INFO: :pAUC : 0.5051887531328321
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_03
+INFO: :test_file  num : 1135
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_03.csv
+INFO: :AUC : 0.5467027236426485
+INFO: :pAUC : 0.5237683539261169
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[3/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_00
+INFO: :test_file  num : 489
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_00.csv
+INFO: :AUC : 0.4473007712082262
+INFO: :pAUC : 0.4933026654038696
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_02
+INFO: :test_file  num : 441
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_02.csv
+INFO: :AUC : 0.5598533724340176
+INFO: :pAUC : 0.5431393733600864
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_04
+INFO: :test_file  num : 430
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_04.csv
+INFO: :AUC : 0.40824242424242424
+INFO: :pAUC : 0.4915470494417863
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_06
+INFO: :test_file  num : 443
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_06.csv
+INFO: :AUC : 0.5000583090379009
+INFO: :pAUC : 0.5310725794077029
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[4/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_00
+INFO: :test_file  num : 237
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_00.csv
+INFO: :AUC : 0.5665693430656933
+INFO: :pAUC : 0.5059546676911256
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_02
+INFO: :test_file  num : 205
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_02.csv
+INFO: :AUC : 0.6215238095238096
+INFO: :pAUC : 0.4817042606516291
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_04
+INFO: :test_file  num : 194
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_04.csv
+INFO: :AUC : 0.5894680851063829
+INFO: :pAUC : 0.5162374020156775
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_06
+INFO: :test_file  num : 196
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_06.csv
+INFO: :AUC : 0.32125000000000004
+INFO: :pAUC : 0.4764254385964912
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[5/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_00
+INFO: :test_file  num : 445
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_00.csv
+INFO: :AUC : 0.6033623188405798
+INFO: :pAUC : 0.47505720823798625
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_02
+INFO: :test_file  num : 356
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_02.csv
+INFO: :AUC : 0.5068359375
+INFO: :pAUC : 0.4817023026315789
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_04
+INFO: :test_file  num : 267
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_04.csv
+INFO: :AUC : 0.5299401197604791
+INFO: :pAUC : 0.5083517176173968
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_06
+INFO: :test_file  num : 178
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_06.csv
+INFO: :AUC : 0.44346153846153846
+INFO: :pAUC : 0.4817813765182186
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[6/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_00
+INFO: :test_file  num : 213
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_00.csv
+INFO: :AUC : 0.5427433628318584
+INFO: :pAUC : 0.5030274802049371
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_02
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_02.csv
+INFO: :AUC : 0.48745614035087725
+INFO: :pAUC : 0.48753462603878117
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_04
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_04.csv
+INFO: :AUC : 0.5343859649122807
+INFO: :pAUC : 0.5110803324099723
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_06
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_06.csv
+INFO: :AUC : 0.37280701754385964
+INFO: :pAUC : 0.487072945521699
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/result.csv
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_01
+INFO: :test_file  num : 601
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_01.csv
+INFO: :AUC : 0.6392145702902675
+INFO: :pAUC : 0.5186172602821796
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_02
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_02.csv
+INFO: :AUC : 0.672437641723356
+INFO: :pAUC : 0.538250387874448
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_03
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_03.csv
+INFO: :AUC : 0.5373582766439908
+INFO: :pAUC : 0.5285236901778255
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_04
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyCar_id_04.csv
+INFO: :AUC : 0.6600226757369615
+INFO: :pAUC : 0.5799021362931137
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[2/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_01
+INFO: :test_file  num : 1181
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_01.csv
+INFO: :AUC : 0.5298392388451444
+INFO: :pAUC : 0.4964774140074596
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_02
+INFO: :test_file  num : 1136
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_02.csv
+INFO: :AUC : 0.5557886904761904
+INFO: :pAUC : 0.5051887531328321
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_03
+INFO: :test_file  num : 1135
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_ToyConveyor_id_03.csv
+INFO: :AUC : 0.5467027236426485
+INFO: :pAUC : 0.5237683539261169
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[3/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_00
+INFO: :test_file  num : 489
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_00.csv
+INFO: :AUC : 0.4473007712082262
+INFO: :pAUC : 0.4933026654038696
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_02
+INFO: :test_file  num : 441
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_02.csv
+INFO: :AUC : 0.5598533724340176
+INFO: :pAUC : 0.5431393733600864
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_04
+INFO: :test_file  num : 430
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_04.csv
+INFO: :AUC : 0.40824242424242424
+INFO: :pAUC : 0.4915470494417863
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_06
+INFO: :test_file  num : 443
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_fan_id_06.csv
+INFO: :AUC : 0.5000583090379009
+INFO: :pAUC : 0.5310725794077029
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[4/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_00
+INFO: :test_file  num : 237
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_00.csv
+INFO: :AUC : 0.5665693430656933
+INFO: :pAUC : 0.5059546676911256
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_02
+INFO: :test_file  num : 205
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_02.csv
+INFO: :AUC : 0.6215238095238096
+INFO: :pAUC : 0.4817042606516291
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_04
+INFO: :test_file  num : 194
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_04.csv
+INFO: :AUC : 0.5894680851063829
+INFO: :pAUC : 0.5162374020156775
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_06
+INFO: :test_file  num : 196
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_pump_id_06.csv
+INFO: :AUC : 0.32125000000000004
+INFO: :pAUC : 0.4764254385964912
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[5/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_00
+INFO: :test_file  num : 445
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_00.csv
+INFO: :AUC : 0.6033623188405798
+INFO: :pAUC : 0.47505720823798625
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_02
+INFO: :test_file  num : 356
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_02.csv
+INFO: :AUC : 0.5068359375
+INFO: :pAUC : 0.4817023026315789
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_04
+INFO: :test_file  num : 267
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_04.csv
+INFO: :AUC : 0.5299401197604791
+INFO: :pAUC : 0.5083517176173968
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_06
+INFO: :test_file  num : 178
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_slider_id_06.csv
+INFO: :AUC : 0.44346153846153846
+INFO: :pAUC : 0.4817813765182186
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[6/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_00
+INFO: :test_file  num : 213
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_00.csv
+INFO: :AUC : 0.5427433628318584
+INFO: :pAUC : 0.5030274802049371
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_02
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_02.csv
+INFO: :AUC : 0.48745614035087725
+INFO: :pAUC : 0.48753462603878117
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_04
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_04.csv
+INFO: :AUC : 0.5343859649122807
+INFO: :pAUC : 0.5110803324099723
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_06
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/anomaly_score_valve_id_06.csv
+INFO: :AUC : 0.37280701754385964
+INFO: :pAUC : 0.487072945521699
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/result/no_add_batch_32/result/result.csv
+INFO: :load_directory <- development
+INFO: :===========================
+INFO: :[1/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_01
+INFO: :test_file  num : 601
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyCar_id_01.csv
+INFO: :AUC : 0.6392145702902675
+INFO: :pAUC : 0.5186172602821796
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_02
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyCar_id_02.csv
+INFO: :AUC : 0.672437641723356
+INFO: :pAUC : 0.538250387874448
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_03
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyCar_id_03.csv
+INFO: :AUC : 0.5373582766439908
+INFO: :pAUC : 0.5285236901778255
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyCar_id_04
+INFO: :test_file  num : 602
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyCar_id_04.csv
+INFO: :AUC : 0.6600226757369615
+INFO: :pAUC : 0.5799021362931137
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[2/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_01
+INFO: :test_file  num : 1181
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyConveyor_id_01.csv
+INFO: :AUC : 0.5298392388451444
+INFO: :pAUC : 0.4964774140074596
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_02
+INFO: :test_file  num : 1136
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyConveyor_id_02.csv
+INFO: :AUC : 0.5557886904761904
+INFO: :pAUC : 0.5051887531328321
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/ToyConveyor_id_03
+INFO: :test_file  num : 1135
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_ToyConveyor_id_03.csv
+INFO: :AUC : 0.5467027236426485
+INFO: :pAUC : 0.5237683539261169
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[3/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_00
+INFO: :test_file  num : 489
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_fan_id_00.csv
+INFO: :AUC : 0.4473007712082262
+INFO: :pAUC : 0.4933026654038696
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_02
+INFO: :test_file  num : 441
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_fan_id_02.csv
+INFO: :AUC : 0.5598533724340176
+INFO: :pAUC : 0.5431393733600864
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_04
+INFO: :test_file  num : 430
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_fan_id_04.csv
+INFO: :AUC : 0.40824242424242424
+INFO: :pAUC : 0.4915470494417863
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/fan_id_06
+INFO: :test_file  num : 443
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_fan_id_06.csv
+INFO: :AUC : 0.5000583090379009
+INFO: :pAUC : 0.5310725794077029
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[4/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_00
+INFO: :test_file  num : 237
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_pump_id_00.csv
+INFO: :AUC : 0.5665693430656933
+INFO: :pAUC : 0.5059546676911256
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_02
+INFO: :test_file  num : 205
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_pump_id_02.csv
+INFO: :AUC : 0.6215238095238096
+INFO: :pAUC : 0.4817042606516291
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_04
+INFO: :test_file  num : 194
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_pump_id_04.csv
+INFO: :AUC : 0.5894680851063829
+INFO: :pAUC : 0.5162374020156775
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/pump_id_06
+INFO: :test_file  num : 196
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_pump_id_06.csv
+INFO: :AUC : 0.32125000000000004
+INFO: :pAUC : 0.4764254385964912
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[5/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_00
+INFO: :test_file  num : 445
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_slider_id_00.csv
+INFO: :AUC : 0.6033623188405798
+INFO: :pAUC : 0.47505720823798625
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_02
+INFO: :test_file  num : 356
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_slider_id_02.csv
+INFO: :AUC : 0.5068359375
+INFO: :pAUC : 0.4817023026315789
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_04
+INFO: :test_file  num : 267
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_slider_id_04.csv
+INFO: :AUC : 0.5299401197604791
+INFO: :pAUC : 0.5083517176173968
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/slider_id_06
+INFO: :test_file  num : 178
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_slider_id_06.csv
+INFO: :AUC : 0.44346153846153846
+INFO: :pAUC : 0.4817813765182186
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :===========================
+INFO: :[6/6] /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve
+INFO: :============== MODEL LOAD ==============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_00
+INFO: :test_file  num : 213
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_valve_id_00.csv
+INFO: :AUC : 0.5427433628318584
+INFO: :pAUC : 0.5030274802049371
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_02
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_valve_id_02.csv
+INFO: :AUC : 0.48745614035087725
+INFO: :pAUC : 0.48753462603878117
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_04
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_valve_id_04.csv
+INFO: :AUC : 0.5343859649122807
+INFO: :pAUC : 0.5110803324099723
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :target_dir : /media/hiroki/working/research/dcase2020/datasets/DCASE2/dev_data/valve_id_06
+INFO: :test_file  num : 214
+INFO: :============== BEGIN TEST FOR A MACHINE ID ==============
+INFO: :anomaly score result ->  /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/anomaly_score_valve_id_06.csv
+INFO: :AUC : 0.37280701754385964
+INFO: :pAUC : 0.487072945521699
+INFO: :============ END OF TEST FOR A MACHINE ID ============
+INFO: :AUC and pAUC results -> /media/hiroki/working/research/dcase2020/result/no_add_batch_16/result/result.csv
