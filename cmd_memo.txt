@@ -1,0 +1,4 @@
+# tensorboard command
+tensorboard --logdir ./ToyCar
+# mlflow command
+mlflow ui

@@ -1,7 +1,7 @@
 IO_OPTION:
   INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
   OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/result/no_add_batch_32'
-  MLFLOW_PATH: '/media/hiroki/working/research/dcase2020/result/train/mlflow'
+  MLFLOW_PATH: '/media/hiroki/working/research/dcase2020/result/train/debug'
   # 'ToyCar' or 'ToyConveyor' or  'fan' or 'pump' or 'slider' or 'valve' or 'run_all'
   MACHINE_TYPE: 'run_all'
   # for log
@@ -15,11 +15,11 @@ mel_spectrogram_param:
   power: 2.0
 
 fit:
-  batch_size : 32
+  batch_size : 512
   shuffle : True
   num_epochs : 100
   devise : 'cuda'
 
 etc:
-  test_size : 0.3
+  test_size : 0.1
   max_fpr : 0.1
