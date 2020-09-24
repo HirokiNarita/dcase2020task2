@@ -1,0 +1,5 @@
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,AUC,,,,,,,,,,,,,,,,
+,,,,,,,,Evaluation dataset,,,,,,,Development dataset,,,,,,
+,,,,,,rank,name,fan,pump,slider,valve,ToyCar,ToyConveyor,average,fan,pump,slider,valve,ToyCar,ToyConveyor,average
+,,,,,,1,Giri_Amazon_task2_2,94.54,93.65,97.63,96.13,94.34,91.19,95.258,82.33,86.94,97.28,97.38,95.04,80.67,89.94

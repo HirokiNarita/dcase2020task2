@@ -166,7 +166,7 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
                 with torch.set_grad_enabled(phase == 'train'):
                     outputs = net(inputs)                 # (batch_size,input(640)) 
                     loss = criterion(outputs, inputs)
-                    preds = outputs                 # decoder output
+                    #preds = outputs                 # decoder output
                     # 訓練時はbackprop
                     if phase == 'train':
                         loss.backward()
