@@ -4,6 +4,7 @@
 # python default library
 import os
 import shutil
+import datetime
 
 # general analysis tool-kit
 import numpy as np
@@ -23,12 +24,15 @@ from collections import defaultdict
 # original library
 import common as com
 import pytorch_modeler as modeler
-from pytorch_model import AutoEncoder
+from pytorch_model import Model
 ############################################################################
-# load config
+# load config and set logger
 ############################################################################
 with open("./config.yaml", 'rb') as f:
     config = yaml.load(f)
+
+log_folder = config['IO_OPTION']['OUTPUT_ROOT']+'/{0}.log'.format(datetime.date.today())
+logger = com.setup_logger(log_folder, '00_train.py')
 ############################################################################
 # Setting seed
 ############################################################################
@@ -47,8 +51,11 @@ machine_types = os.listdir(dev_path)
 OUTPUT_ROOT = config['IO_OPTION']['OUTPUT_ROOT']
 MODEL_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/models'
 TB_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/tb'
+IMG_DIR = config['IO_OPTION']['OUTPUT_ROOT'] + '/img'
 os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(TB_DIR, exist_ok=True)
+os.makedirs(IMG_DIR, exist_ok=True)
+
 
 # copy config
 shutil.copy('./config.yaml', OUTPUT_ROOT)
@@ -91,26 +98,36 @@ for machine_type in machine_types:
 #############################################################################
 def run(machine_type):
     com.tic()
-    print('TRAINING : ', machine_type)
+    logger.info('TARGET MACHINE_TYPE: {0}'.format(machine_type))
+    logger.info('MAKE DATA_LOADER')
     # dev_train_paths
-    dataloaders_dict = modeler.make_dataloader(dev_train_paths, machine_type)
+    dataloaders_dict = modeler.make_dataloader_array(train_paths, machine_type)
     # define writer for tensorbord
-    os.makedirs(TB_DIR+'/'+machine_type, exist_ok=False)
+    os.makedirs(TB_DIR+'/'+machine_type, exist_ok=True)         # debug
     tb_log_dir = TB_DIR + '/' + machine_type
     writer = SummaryWriter(log_dir = tb_log_dir)
+    logger.info('TRAINING')
     # parameter setting
-    net = AutoEncoder()
+    net = Model(sample_rate=config['preprocessing']['sample_rate'],
+                window_size=['preprocessing']['window_size'],
+                hop_size=['preprocessing']['hop_size'],
+                mel_bins=['preprocessing']['mel_bins'],
+                fmin=['preprocessing']['fmin'],
+                fmax=['preprocessing']['fmax'])#, classes_num)
+
     optimizer = optim.Adam(net.parameters())
     criterion = nn.MSELoss()
     num_epochs = config['fit']['num_epochs']
-    history = modeler.train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer)
+    history = modeler.train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer, machine_type)
     # output
     model = history['model']
     model_out_path = MODEL_DIR+'/{}_model.pth'.format(machine_type)
     torch.save(model.state_dict(), model_out_path)
+    logger.info('\n success:{0} \n'.format(machine_type) + \
+                    'model_out_path ==> \n {0}'.format(model_out_path))
     #  close writer for tensorbord
     writer.close()
-    modeler.mlflow_log(history, config, machine_type, model_out_path, tb_log_dir)
+    #modeler.mlflow_log(history, config, machine_type, model_out_path, tb_log_dir)
     com.toc()
 
 

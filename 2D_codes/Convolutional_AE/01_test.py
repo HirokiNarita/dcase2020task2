@@ -23,7 +23,7 @@ import numpy
 from sklearn import metrics
 import common as com
 import pytorch_modeler as modeler
-from pytorch_model import AutoEncoder
+from pytorch_model import VAE as ae
 import torch.utils.data
 import yaml
 yaml.warnings({'YAMLLoadWarning': False})
@@ -210,7 +210,7 @@ if __name__ == "__main__":
             sys.exit(-1)
 
         # define AE model
-        model = AutoEncoder().to(device)
+        model = ae().to(device)
         model.eval()
         model.load_state_dict(torch.load(model_file))
 
@@ -254,8 +254,10 @@ if __name__ == "__main__":
                     feed_data = torch.as_tensor(
                         data, device=device, dtype=torch.float32)
                     with torch.no_grad():
-                        pred = model(feed_data).to(
-                            'cpu').detach().numpy().copy()
+                        _, _, _, y = model(feed_data, device)
+                        pred = y
+                        pred = pred.to('cpu').detach().numpy().copy()
+                        #print(pred)
 
                     errors = numpy.mean(numpy.square(data - pred), axis=1)
                     y_pred[file_idx] = numpy.mean(errors)

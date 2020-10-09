@@ -15,6 +15,7 @@ import sys
 import os
 import random
 import time
+from logging import getLogger, StreamHandler, Formatter, FileHandler, DEBUG
 
 # additional
 import numpy
@@ -93,7 +94,7 @@ def yaml_load(path="./baseline.yaml"):
 # file I/O
 ########################################################################
 # wav file Input
-def file_load(wav_name, mono=False):
+def file_load(wav_name, sr=16000, mono=True):
     """
     load .wav file.
 
@@ -107,7 +108,7 @@ def file_load(wav_name, mono=False):
     return : numpy.array( float )
     """
     try:
-        return librosa.load(wav_name, sr=None, mono=mono)
+        return librosa.load(wav_name, sr=sr, mono=mono)
     except:
         logger.error("file_broken or not exists!! : {}".format(wav_name))
 
@@ -199,3 +200,21 @@ def toc(tag="elapsed time"):
         print("{}: {:.9f} [sec]".format(tag, time.time() - start_time_tictoc))
     else:
         print("tic has not been called")
+
+
+def setup_logger(log_folder, modname=__name__):
+    logger = getLogger(modname)
+    logger.setLevel(DEBUG)
+
+    sh = StreamHandler()
+    sh.setLevel(DEBUG)
+    formatter = Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    sh.setFormatter(formatter)
+    logger.addHandler(sh)
+
+    fh = FileHandler(log_folder) #fh = file handler
+    fh.setLevel(DEBUG)
+    fh_formatter = Formatter('%(asctime)s - %(filename)s - %(name)s - %(lineno)d - %(levelname)s - %(message)s')
+    fh.setFormatter(fh_formatter)
+    logger.addHandler(fh)
+    return logger

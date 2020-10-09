@@ -7,15 +7,28 @@ IO_OPTION:
   # for log
   model_name: 'Deep_AutoEncoder_no_add_batch_16'
   
-mel_spectrogram_param:
-  n_mels: 128
-  frames : 5
-  n_fft: 1024
-  hop_length: 512
-  power: 2.0
+preprocessing:
+  sample_rate: 16000
+  mono: True
+  mel_bins: 64
+  fmin: 50
+  fmax: 14000
+  window_size: 1024
+  hop_size: 320
+  window: 'hann'
+  pad_mode: 'reflect'
+  center: True
+　ref: 1.0
+　amin: 1e-10
+　top_db: None
+
+  #frames : 5
+  #n_fft: 1024
+  #hop_length: 512
+  #power: 2.0
 
 fit:
-  batch_size : 16
+  batch_size : 32
   shuffle : True
   num_epochs : 100
   devise : 'cuda'
@@ -23,3 +36,6 @@ fit:
 etc:
   test_size : 0.3
   max_fpr : 0.1
+
+
+

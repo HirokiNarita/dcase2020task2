@@ -52,7 +52,7 @@ def set_seed(seed: int = 42):
 ############################################################################
 def make_dataloader(train_paths, machine_type):
     transform = transforms.Compose([
-        prep.Wav_to_Melspectrogram(),
+        prep.extract_waveform(),
         prep.ToTensor()
     ])
     train_dataset = prep.DCASE_task2_Dataset(train_paths[machine_type]['train'], transform=transform)
@@ -108,17 +108,24 @@ def mlflow_log(history, config, machine_type, out_path, tb_log_dir):
 
 # training function
 def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
+    # make img outdir
+    img_out_dir = IMG_DIR + '/' + machine_type
+    os.makedirs(img_out_dir, exist_ok=True)
     # GPUが使えるならGPUモードに
     device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     print("use:", device)
     net.to(device)
-    # count
-    total_mse_count = {'train':0, 'valid':0}
-    total_score_count = {'train':0, 'valid':0}
-    # epoch_score保存用のdict
-    epoch_scores = defaultdict(list)
+
+    epoch_losses = defaultdict(list)
+    epoch_klds = defaultdict(list)
+    epoch_reconsts = defaultdict(list)
+    
+    valid_epoch_inputs = []
+    valid_epoch_output = []
+    
     # epochループ開始
     for epoch in range(num_epochs):
+        
         # epochごとの訓練と検証のループ
         for phase in ['train', 'valid']:
             if phase == 'train':
@@ -128,39 +135,19 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
             anomaly_score = {'train':0.0, 'valid':0.0}
             # データローダーからminibatchを取り出すループ
             for sample in tqdm(dataloaders_dict[phase]):
-                features = sample['features']
-                # サンプル一つ分でのloss
-                sample_loss = {'train':0.0, 'valid':0.0}
-                # フレームごとに学習させていくループ
-                print(sample)
-                print("features shape:{}".format(features.shape))
-                for row in range(features.shape[0]):
-                    # minibatchからフレームごとに取り出す
-                    x = features[row,:]
-                    # optimizerの初期化
-                    optimizer.zero_grad()
-                    # 順伝播(forward)
-                    with torch.set_grad_enabled(phase == 'train'):
-                        x = x.to(device, dtype=torch.float32)
-                        outputs = net(x)
-                        loss = criterion(outputs, x)    # MSE(1/640)
-                        preds = outputs                 # decoder output
-                        # 訓練時は逆伝播(backforward)
-                        if phase == 'train':
-                            loss.backward()
-                            optimizer.step()
-                        writer.add_scalar('{}_total_mse'.format(phase), loss.item(), total_mse_count[phase])
-                        total_mse_count[phase]+=1
-                    # lossを追加
-                    sample_loss[phase] += loss.item()
-                # anomaly score
-                anomaly_score[phase] += sample_loss[phase] / features.shape[0]
-                writer.add_scalar('{}_total_score'.format(phase), anomaly_score[phase], total_score_count[phase])
-                total_score_count[phase]+=1
-            # epoch score
-            epoch_score = anomaly_score[phase] / dataloaders_dict[phase].batch_size
-            epoch_scores[phase].append(epoch_score)
-            writer.add_scalar('{}_epoch_score'.format(phase), epoch_score, epoch)
+                input = sample['features']
+                input = input.to(device)
+                # optimizerを初期化
+                optimizer.zero_grad()
+
+                # 順伝播(forward)
+                with torch.set_grad_enabled(phase == 'train'):
+                    output_dict = net(input, device)    # (batch_size,input(2D)) 
+                    x, y, loss = output_dict['x'], output_dict['y'], output_dict['loss']
+                    # 訓練時はbackprop
+                    if phase == 'train':
+                        loss.backward()
+                        optimizer.step()
             
             if phase == 'valid':
                 print('-------------')

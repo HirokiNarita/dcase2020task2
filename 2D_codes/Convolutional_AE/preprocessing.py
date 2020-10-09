@@ -12,10 +12,9 @@ import common as com
 with open("./config.yaml", 'rb') as f:
     config = yaml.load(f)
 
-
-class Wav_to_Melspectrogram(object):
+class extract_waveform(object):
     """
-    wavデータロード(波形) -> ログメルスペクトログラム
+    wavデータロード(波形)
     
     Attributes
     ----------
@@ -26,17 +25,11 @@ class Wav_to_Melspectrogram(object):
         self.sound_data = sound_data
     
     def __call__(self, sample):
-        self.sound_data = com.file_to_vector_array(
-            sample['wav_name'],
-            config['mel_spectrogram_param']['n_mels'],
-            config['mel_spectrogram_param']['frames'],
-            config['mel_spectrogram_param']['n_fft'],
-            config['mel_spectrogram_param']['hop_length'],
-            config['mel_spectrogram_param']['power']
-        )
+        self.sound_data = com.file_load(sample['wav_name'],
+                                        sr=config['preprocessing']['sr'],
+                                        mono=config['preprocessing']['mono'])
         self.labels = np.full((self.sound_data.shape[0]), sample['label'])
         return {'features': self.sound_data, 'labels': self.labels}
-
 
 class ToTensor(object):
     """
@@ -47,7 +40,6 @@ class ToTensor(object):
         features, labels = sample['features'], sample['labels']
         
         return {'features': torch.from_numpy(features).float(), 'labels': torch.from_numpy(labels)}
-
 
 class DCASE_task2_Dataset(torch.utils.data.Dataset):
     '''
