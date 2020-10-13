@@ -5,9 +5,11 @@
 # python default library
 import os
 import random
+import datetime
 
 # general analysis tool-kit
 import numpy as np
+import matplotlib.pyplot as plt
 
 # pytorch
 import torch
@@ -35,6 +37,8 @@ import preprocessing as prep
 ############################################################################
 with open("./config.yaml", 'rb') as f:
     config = yaml.load(f)
+log_folder = config['IO_OPTION']['OUTPUT_ROOT']+'/{0}.log'.format(datetime.date.today())
+logger = com.setup_logger(log_folder, 'pytorch_modeler.py')
 ############################################################################
 # Setting seed
 ############################################################################
@@ -109,33 +113,33 @@ def mlflow_log(history, config, machine_type, out_path, tb_log_dir):
 # training function
 def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
     # make img outdir
-    img_out_dir = IMG_DIR + '/' + machine_type
-    os.makedirs(img_out_dir, exist_ok=True)
+    #img_out_dir = IMG_DIR + '/' + machine_type
+    #os.makedirs(img_out_dir, exist_ok=True)
     # GPUが使えるならGPUモードに
     device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     print("use:", device)
     net.to(device)
 
     epoch_losses = defaultdict(list)
-    epoch_klds = defaultdict(list)
-    epoch_reconsts = defaultdict(list)
-    
-    valid_epoch_inputs = []
-    valid_epoch_output = []
+    reconstruct_img = defaultdict(list)
     
     # epochループ開始
     for epoch in range(num_epochs):
-        
+        # loss
+        losses = {}
+        losses['train'] = 0
+        losses['valid'] = 0
+
         # epochごとの訓練と検証のループ
         for phase in ['train', 'valid']:
             if phase == 'train':
                 net.train()
             else:
                 net.eval()
-            anomaly_score = {'train':0.0, 'valid':0.0}
+
             # データローダーからminibatchを取り出すループ
             for sample in tqdm(dataloaders_dict[phase]):
-                input = sample['features']
+                input = sample['feature']
                 input = input.to(device)
                 # optimizerを初期化
                 optimizer.zero_grad()
@@ -148,9 +152,18 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
                     if phase == 'train':
                         loss.backward()
                         optimizer.step()
-            
-            if phase == 'valid':
-                print('-------------')
-                print('Epoch {}/{}:train_score:{:.6f}, valid_score:{:.6f}'.format(epoch+1, num_epochs, epoch_scores['train'][-1], epoch_scores['valid'][-1]))
+                losses[phase] += loss.item()
+
+        epoch_losses['train'].append(losses['train'] / len(dataloaders_dict['train']))
+        epoch_losses['valid'].append(losses['valid'] / len(dataloaders_dict['valid']))
+        
+        logger.info('Epoch {}/{}:train_loss:{:.6f}, valid_loss:{:.6f}'.format(epoch+1,
+                                                                              num_epochs,
+                                                                              epoch_losses['train'][-1],
+                                                                              epoch_losses['valid'][-1]
+                                                                              ))
+        if (epoch+1 % 10 == 0) or (epoch == 0):
+            reconstruct_img['input'].append(x)
+            reconstruct_img['output'].append(y)
     
-    return {'train_epoch_score':epoch_scores['train'][-1], 'valid_epoch_score':epoch_scores['valid'][-1], 'model':net}
+    return {'train_epoch_score':epoch_losses['train'], 'valid_epoch_score':epoch_losses['valid'], 'reconstruct_img':reconstruct_img, 'model':net}

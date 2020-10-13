@@ -24,7 +24,7 @@ from collections import defaultdict
 # original library
 import common as com
 import pytorch_modeler as modeler
-from pytorch_model import Model
+from pytorch_model import CNN14PANNsAutoEncoder as Model
 ############################################################################
 # load config and set logger
 ############################################################################
@@ -109,11 +109,11 @@ def run(machine_type):
     logger.info('TRAINING')
     # parameter setting
     net = Model(sample_rate=config['preprocessing']['sample_rate'],
-                window_size=['preprocessing']['window_size'],
-                hop_size=['preprocessing']['hop_size'],
-                mel_bins=['preprocessing']['mel_bins'],
-                fmin=['preprocessing']['fmin'],
-                fmax=['preprocessing']['fmax'])#, classes_num)
+                window_size=config['preprocessing']['window_size'],
+                hop_size=config['preprocessing']['hop_size'],
+                mel_bins=config['preprocessing']['mel_bins'],
+                fmin=config['preprocessing']['fmin'],
+                fmax=config['preprocessing']['fmax'])
 
     optimizer = optim.Adam(net.parameters())
     criterion = nn.MSELoss()

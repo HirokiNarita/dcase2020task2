@@ -249,3 +249,16 @@ def count_flops(model, audio_length):
         sum(list_bn) + sum(list_relu) + sum(list_pooling2d) + sum(list_pooling1d)
     
     return total_flops
+
+#https://discuss.pytorch.org/t/how-to-load-part-of-pre-trained-model/1113/16
+def filtered_load_model(model, pretrained_dict):
+    pretrained_dict = pretrained_dict['model']
+    model_dict = model.state_dict()
+    # 1. filter out unnecessary keys
+    pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+    # 2. overwrite entries in the existing state dict
+    model_dict.update(pretrained_dict) 
+    # 3. load the new state dict
+    model.load_state_dict(model_dict)
+
+    return model

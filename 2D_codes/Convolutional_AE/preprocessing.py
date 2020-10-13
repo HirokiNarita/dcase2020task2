@@ -18,18 +18,18 @@ class extract_waveform(object):
     
     Attributes
     ----------
-    dims = n_mels * frames
-    sound_data : numpy.ndarray.shape = (timecourse, dims)
+    sound_data : waveform
     """
     def __init__(self, sound_data=None):
         self.sound_data = sound_data
     
     def __call__(self, sample):
         self.sound_data = com.file_load(sample['wav_name'],
-                                        sr=config['preprocessing']['sr'],
+                                        sr=config['preprocessing']['sample_rate'],
                                         mono=config['preprocessing']['mono'])
-        self.labels = np.full((self.sound_data.shape[0]), sample['label'])
-        return {'features': self.sound_data, 'labels': self.labels}
+        self.sound_data = self.sound_data[0]
+        self.label = np.array(sample['label'])
+        return {'feature': self.sound_data, 'label': self.label}
 
 class ToTensor(object):
     """
@@ -37,9 +37,8 @@ class ToTensor(object):
     """
 
     def __call__(self, sample):
-        features, labels = sample['features'], sample['labels']
-        
-        return {'features': torch.from_numpy(features).float(), 'labels': torch.from_numpy(labels)}
+        feature, label = sample['feature'], sample['label']
+        return {'feature': torch.from_numpy(feature).float(), 'label': torch.from_numpy(label)}
 
 class DCASE_task2_Dataset(torch.utils.data.Dataset):
     '''
