@@ -24,7 +24,7 @@ from collections import defaultdict
 # original library
 import common as com
 import pytorch_modeler as modeler
-from pytorch_model import CNN14PANNsAutoEncoder as Model
+from pytorch_model import CNN6PANNsAutoEncoder as Model
 ############################################################################
 # load config and set logger
 ############################################################################

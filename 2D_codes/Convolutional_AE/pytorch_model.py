@@ -64,8 +64,8 @@ class deConvBlock5x5(nn.Module):
         
         self.deconv1 = nn.ConvTranspose2d(in_channels=in_channels, 
                                         out_channels=out_channels,
-                                        kernel_size=(5, 5),
-                                        stride=(1, 1),
+                                        kernel_size=(2, 2),
+                                        stride=(2, 2),
                                         #padding=(2, 2),
                                         bias=False
                                         )
@@ -153,19 +153,20 @@ class CNN6PANNsAutoEncoder(nn.Module):
     def forward(self, input, mixup_lambda=None):
         """
         Input: (batch_size, data_length)"""
-
         x = self.spectrogram_extractor(input)   # (batch_size, 1, time_steps, freq_bins)
-        logmel_spec_x = self.logmel_extractor(x)    # (batch_size, 1, time_steps, mel_bins)
+        x = self.logmel_extractor(x)    # (batch_size, 1, time_steps, mel_bins)
 
-        x = logmel_spec_x.transpose(1, 3)
+        x = x.transpose(1, 3) # (batch_size, melbins, time_steps, 1)
+        x = x[:, :, :512,:]   # trim
+        input_spec = x        # save input melspectrogram
         x = self.bn0(x)
-        x = x.transpose(1, 3)
+        x = x.transpose(1, 3) # (batch_size, 1, time_steps, melbins)
         
         x = self.encoder(x)
         y = self.decoder(x)
+        y = y.transpose(1, 3) # (batch_size, melbins, time_steps, 1)
+        loss = F.mse_loss(y, input_spec)
         
-        loss = 'hoge'#F.mse_loss(y, logmel_spec_x)
-        
-        output_dict = {'loss':loss, 'x':x, 'y':y}
+        output_dict = {'loss':loss, 'x':input_spec, 'y':y}
 
         return output_dict

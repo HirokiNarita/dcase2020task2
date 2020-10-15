@@ -162,7 +162,8 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
                                                                               epoch_losses['train'][-1],
                                                                               epoch_losses['valid'][-1]
                                                                               ))
-        if (epoch+1 % 10 == 0) or (epoch == 0):
+        
+        if ((epoch+1) % 10 == 0) or (epoch == 0):
             reconstruct_img['input'].append(x)
             reconstruct_img['output'].append(y)
     

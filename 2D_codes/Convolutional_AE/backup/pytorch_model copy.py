@@ -240,7 +240,7 @@ class CNN14PANNsAutoEncoder(nn.Module):
 
         x = self.spectrogram_extractor(input)   # (batch_size, 1, time_steps, freq_bins)
         logmel_spec_x = self.logmel_extractor(x)    # (batch_size, 1, time_steps, mel_bins)
-
+        logmel_spec_x = logmel_spec_x[:, :, :513,:]
         x = logmel_spec_x.transpose(1, 3)
         x = self.bn0(x)
         x = x.transpose(1, 3)
