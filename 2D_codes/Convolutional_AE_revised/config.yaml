@@ -15,7 +15,7 @@ preprocessing:
   fmin: 50
   fmax: 8000
   window_size: 1024
-  hop_size: 125
+  hop_size: 1024
   window: 'hann'
   pad_mode: 'reflect'
   center: True
@@ -31,7 +31,7 @@ preprocessing:
 fit:
   batch_size : 32
   shuffle : True
-  num_epochs : 60
+  num_epochs : 100
   devise : 'cuda'
 
 etc:

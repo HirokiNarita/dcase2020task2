@@ -29,7 +29,7 @@ preprocessing:
   #power: 2.0
 
 fit:
-  batch_size : 32
+  batch_size : 64
   shuffle : True
   num_epochs : 100
   devise : 'cuda'
