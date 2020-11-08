@@ -1,0 +1,41 @@
+IO_OPTION:
+  INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
+  OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/result/2D/LSTM_AEs/bidirectional_LSTM_AE'
+  MLFLOW_PATH: '/media/hiroki/working/research/dcase2020/result/train/mlflow'
+  # 'ToyCar' or 'ToyConveyor' or  'fan' or 'pump' or 'slider' or 'valve' or 'run_all'
+  MACHINE_TYPE: 'run_all'
+  # for log
+  model_name: 'bidirectional_LSTM_AE'
+  
+preprocessing:
+  sample_rate: 16000
+  mono: True
+  mel_bins: 128
+  fmin: 50
+  fmax: 8000
+  window_size: 1024
+  hop_size: 1250
+  window: 'hann'
+  pad_mode: 'reflect'
+  center: True
+　ref: 1.0
+　amin: 1e-10
+　top_db: None
+
+  #frames : 5
+  #n_fft: 1024
+  #hop_length: 512
+  #power: 2.0
+
+fit:
+  batch_size : 32
+  shuffle : True
+  num_epochs : 100
+  devise : 'cuda'
+
+etc:
+  test_size : 0.3
+  max_fpr : 0.1
+
+
+
