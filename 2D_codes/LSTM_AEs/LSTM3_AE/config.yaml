@@ -1,6 +1,6 @@
 IO_OPTION:
   INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
-  OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/result/2D/LSTM3_CONV2_AE'
+  OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/result/2D/LSTM_CNN_AE/LSTM3CNN_AE'
   MLFLOW_PATH: '/media/hiroki/working/research/dcase2020/result/train/mlflow'
   # 'ToyCar' or 'ToyConveyor' or  'fan' or 'pump' or 'slider' or 'valve' or 'run_all'
   MACHINE_TYPE: 'run_all'
