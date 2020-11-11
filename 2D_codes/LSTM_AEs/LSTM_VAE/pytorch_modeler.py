@@ -121,7 +121,7 @@ def calc_auc(y_true, y_pred):
     return auc, p_auc
 
 # training function
-def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
+def train_net(net, dataloaders_dict, criterion, optimizer, scheduler, num_epochs, writer):
     # make img outdir
     #img_out_dir = IMG_DIR + '/' + machine_type
     #os.makedirs(img_out_dir, exist_ok=True)
@@ -162,6 +162,7 @@ def train_net(net, dataloaders_dict, criterion, optimizer, num_epochs, writer):
                         if phase == 'train':
                             loss.backward()
                             optimizer.step()
+                            scheduler.step()
                             # loss
                             tr_losses += loss.item()
                             KL += output_dict['KL'].item()

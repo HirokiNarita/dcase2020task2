@@ -310,7 +310,7 @@ class LSTM_AutoEncoder(nn.Module):
         self.act1 = nn.PReLU()
         self.act2 = nn.PReLU()
         self.act3 = nn.PReLU()
-        self.fc_mean = nn.Linear(8192, 1024d) # mu
+        self.fc_mean = nn.Linear(8192, 1024) # mu
         self.fc_var = nn.Linear(8192, 1024)  # var
         self.fc_z = nn.Linear(1024, 8192)    # z
 
