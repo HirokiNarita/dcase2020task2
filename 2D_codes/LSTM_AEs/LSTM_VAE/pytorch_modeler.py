@@ -143,7 +143,7 @@ def train_net(net, dataloaders_dict, criterion, optimizer, scheduler, num_epochs
         sigma_loss = 0
         #losses['valid'] = 0
         labels = []
-
+        kl_beta = (epoch / num_epochs)
         # epochごとの訓練と検証のループ
         for phase in ['train', 'valid']:
             if phase == 'train':
@@ -153,10 +153,9 @@ def train_net(net, dataloaders_dict, criterion, optimizer, scheduler, num_epochs
                     input = input.to(device)
                     # optimizerを初期化
                     optimizer.zero_grad()
-
                     # 順伝播(forward)
                     with torch.set_grad_enabled(phase == 'train'):
-                        output_dict = net(input, device)    # (batch_size,input(2D)) 
+                        output_dict = net(input, device, kl_beta=kl_beta)    # (batch_size,input(2D)) 
                         x, y, loss = output_dict['x'], output_dict['y'], output_dict['loss']
                         # 訓練時はbackprop
                         if phase == 'train':
@@ -206,9 +205,9 @@ def train_net(net, dataloaders_dict, criterion, optimizer, scheduler, num_epochs
                 
                 writer.add_scalar("valid_AUC", valid_AUC, epoch+1)
                 writer.add_scalar("pAUC", valid_pAUC, epoch+1)
-                if ((epoch+1) % 10 == 0) or (epoch == 0):
-                    #plt.imshow(y[0,:,:].to('cpu').detach().numpy(), aspect='auto')
-                    #plt.show()
+                if ((epoch+1) % 5 == 0) or (epoch == 0):
+                    plt.imshow(y[0,:,:].to('cpu').detach().numpy(), aspect='auto')
+                    plt.show()
                     reconstruct_img['input'].append(x)
                     reconstruct_img['output'].append(y)
                     reconstruct_img['label'].append(label)

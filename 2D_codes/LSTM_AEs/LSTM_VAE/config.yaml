@@ -1,11 +1,11 @@
 IO_OPTION:
   INPUT_ROOT: '/media/hiroki/working/research/dcase2020/datasets/DCASE2'
-  OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/result/2D/LSTM_VAE_tune'
+  OUTPUT_ROOT: '/media/hiroki/working/research/dcase2020/result/2D/LSTM_CONV_VAE2'
   MLFLOW_PATH: '/media/hiroki/working/research/dcase2020/result/train/mlflow'
   # 'ToyCar' or 'ToyConveyor' or  'fan' or 'pump' or 'slider' or 'valve' or 'run_all'
   MACHINE_TYPE: 'run_all'
   # for log
-  model_name: 'LSTM_VAE'
+  model_name: 'LSTM_CONV_VAE2'
   
 preprocessing:
   sample_rate: 16000
@@ -30,7 +30,7 @@ preprocessing:
 fit:
   batch_size : 64
   shuffle : True
-  num_epochs : 200
+  num_epochs : 100
   devise : 'cuda'
 
 etc:
